@@ -1,0 +1,15 @@
+ID Fact, ID Date, ID Time, ID Description, ID Location, ID Detail Damage, ID Total Damage: These appear to be identifier columns that might link to other tables or records, providing detailed references or categorizations.
+
+Year, Mo (Month), Dy (Day), Hr (Hour), Mn (Minute), Sec (Second): These columns record the date and time details of the tsunami events.
+
+Tsunami Event Validity, Tsunami Cause Code: These columns classify the event's reliability and the cause of the tsunami (e.g., earthquake, volcanic eruption).
+
+Earthquake Magnitude, Maximum Water Height (m): These provide metrics on the earthquake's strength and the tsunami's maximum water height.
+
+Location Name, Country, Latitude, Longitude: Geographic details of where the tsunami event occurred.
+
+Deaths, Missing, Injuries: Human impact details, including the number of deaths, missing persons, and injuries.
+
+Damage ($Mil), Houses Destroyed, Houses Damaged: Economic and infrastructural impact, quantified by estimated damage in millions of dollars and the number of houses destroyed or damaged.
+
+Total Deaths, Total Missing, Total Injuries, Total Damage ($Mil): These columns seem to aggregate the total impact across multiple events or updates to an event.
