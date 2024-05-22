@@ -96,8 +96,31 @@ JOIN DimDate dd ON f.[ID Date] = dd.[ID Date]
 GROUP BY dl.[Country], dl.[Location Name], dd.[Year], dd.[Mo]
 ORDER BY dl.[Country], dl.[Location Name], dd.[Year], dd.[Mo];
 
+-- 8. Query for the maximum water height by country and year
+SELECT 
+    dl.[Country],
+    dd.[Year],
+    MAX(dl.[Maximum Water Height (m)]) AS [Max Water Height]
+FROM Fact f
+JOIN DimLocation dl ON f.[ID Location] = dl.[ID Location]
+JOIN DimDate dd ON f.[ID Date] = dd.[ID Date]
+GROUP BY dl.[Country], dd.[Year]
+ORDER BY dl.[Country], dd.[Year];
 
--- 8. Query  all countries, location name,  Tsunami Event Validity, 
+-- 9. Query for the number of tsunamis per month and year with intensity details
+SELECT 
+    dd.[Year],
+    dd.[Mo] AS [Month],
+    dl.[Tsunami Intensity],
+    COUNT(f.[ID Fact]) AS [Fact Count]
+FROM Fact f
+JOIN DimLocation dl ON f.[ID Location] = dl.[ID Location]
+JOIN DimDate dd ON f.[ID Date] = dd.[ID Date]
+WHERE dl.[Tsunami Intensity] IS NOT NULL
+GROUP BY dd.[Year], dd.[Mo], dl.[Tsunami Intensity]
+ORDER BY dd.[Year], dd.[Mo], dl.[Tsunami Intensity];
+
+-- 10. Query  all countries, location name,  Tsunami Event Validity, 
 --tsunami by hr, mn, sec, day, month, year         
 SELECT 
     dl.[Country],
