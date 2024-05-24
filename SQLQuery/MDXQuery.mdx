@@ -1,0 +1,162 @@
+-- 1. Query Tsunami date and description
+
+SELECT 
+  {
+    [Measures].[Fact Count]
+  } ON COLUMNS,
+  NON EMPTY 
+  (
+    [Dim Date].[Year].[Year].Members * 
+    [Dim Description].[Tsunami Event Validity].[Tsunami Event Validity].Members * 
+    [Dim Description].[Tsunami Cause Code].[Tsunami Cause Code].Members * 
+    [Dim Description].[Earthquake Magnitude].[Earthquake Magnitude].Members * 
+    [Dim Description].[Vol].[Vol].Members
+  ) ON ROWS
+FROM [SSIS Tsunami]
+
+
+
+
+-- 2. Query total number of deaths over the year
+
+SELECT 
+  {
+    [Measures].[Fact Count]
+  } ON COLUMNS,
+  NON EMPTY 
+  (
+    [Dim Date].[Year].[Year].Members * 
+    [Dim Total Damage].[Total Deaths].[Total Deaths].Members
+  ) ON ROWS
+FROM [SSIS Tsunami]
+
+
+
+-- 3. Query Tsunami Intensity over the year
+
+SELECT 
+  NON EMPTY {
+    [Measures].[Fact Count]
+  } ON COLUMNS,
+  NON EMPTY {
+    [Dim Date].[Year].[Year].Members *
+    [Dim Location].[Tsunami Intensity].[Tsunami Intensity].Members
+  } ON ROWS
+FROM [SSIS Tsunami]
+
+
+
+-- 4. Query total of deaths over the year with country
+
+SELECT 
+  NON EMPTY {
+    [Measures].[Fact Count]
+  } ON COLUMNS,
+  NON EMPTY {
+    [Dim Location].[Country].[Country].Members *
+    [Dim Date].[Year].[Year].Members *
+    [Dim Total Damage].[Total Deaths].[Total Deaths].Members
+  } ON ROWS
+FROM [SSIS Tsunami]
+
+
+
+-- 5. Query Total houses damaged with country and location
+
+SELECT 
+  {
+    [Measures].[Fact Count]
+  } ON COLUMNS,
+  NON EMPTY 
+  (
+    [Dim Location].[Country].[Country].Members *
+    [Dim Location].[Location Name].[Location Name].Members *
+    [Dim Total Damage].[Total Houses Damaged].[Total Houses Damaged].Members
+  ) ON ROWS
+FROM [SSIS Tsunami]
+
+
+
+
+-- 6. Query Countries where has averegare Earthquake Magnitude, Vol occur 
+--over the years of tsunamis
+
+SELECT 
+  {
+    [Measures].[Fact Count]
+  } ON COLUMNS,
+  NON EMPTY 
+  (
+    [Dim Location].[Country].[Country].Members * 
+    [Dim Date].[Year].[Year].Members * 
+    [Dim Description].[Earthquake Magnitude].[Earthquake Magnitude].Members *
+    [Dim Description].[Vol].[Vol].Members
+  ) ON ROWS
+FROM [SSIS Tsunami]
+
+-- 7. Countries and location has tsunami over the month
+
+SELECT 
+  {
+    [Measures].[Fact Count]
+  } ON COLUMNS,
+  NON EMPTY 
+  (
+    [Dim Location].[Country].[Country].Members *
+    [Dim Location].[Location Name].[Location Name].Members *
+	[Dim Date].[Mo].[Mo].Members
+
+  ) ON ROWS
+FROM [SSIS Tsunami]
+
+
+
+
+-- 8. Query for the maximum water height by country and year
+
+SELECT 
+  {
+    [Measures].[Fact Count]
+  } ON COLUMNS,
+  NON EMPTY 
+  (
+    [Dim Location].[Country].[Country].Members *
+    [Dim Location].[Location Name].[Location Name].Members *
+	[Dim Date].[Year].[Year].Members * 
+	[Dim Date].[Mo].[Mo].Members
+
+  ) ON ROWS
+FROM [SSIS Tsunami]
+
+
+-- 9. Query for number of houses destroyed by country and year
+
+SELECT 
+  {
+    [Measures].[Fact Count]
+  } ON COLUMNS,
+  NON EMPTY 
+  (
+    [Dim Location].[Country].[Country].Members *
+    [Dim Date].[Year].[Year].Members *
+    [Dim Total Damage].[Total Houses Destroyed].[Total Houses Destroyed].Members
+  ) ON ROWS
+FROM [SSIS Tsunami]
+
+
+
+-- 10. Query for the total damage ($) by country and year
+
+SELECT 
+  {
+    [Measures].[Fact Count]
+  } ON COLUMNS,
+  NON EMPTY 
+  (
+    [Dim Date].[Year].[Year].Members *
+    [Dim Location].[Location Name].[Location Name].Members *
+    [Dim Total Damage].[Total Damage  Mil].[Total Damage  Mil].Members
+  ) ON ROWS
+FROM [SSIS Tsunami]
+
+  
