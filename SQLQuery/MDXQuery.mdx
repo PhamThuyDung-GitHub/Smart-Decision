@@ -17,7 +17,7 @@ FROM [SSIS Tsunami]
 
 
 
--- 2. Query total number of deaths over the year
+-- 2. Query number of deaths and their description
 
 SELECT 
   {
@@ -25,10 +25,11 @@ SELECT
   } ON COLUMNS,
   NON EMPTY 
   (
-    [Dim Date].[Year].[Year].Members * 
-    [Dim Total Damage].[Total Deaths].[Total Deaths].Members
+    [Dim Detail Damage].[Deaths].[Deaths].Members *
+    [Dim Detail Damage].[Death Description].[Death Description].Members
   ) ON ROWS
 FROM [SSIS Tsunami]
+
 
 
 
@@ -61,7 +62,7 @@ FROM [SSIS Tsunami]
 
 
 
--- 5. Query Total houses damaged with country and location
+-- 5.  Query for number of houses damaged and their descriptions
 
 SELECT 
   {
@@ -69,17 +70,15 @@ SELECT
   } ON COLUMNS,
   NON EMPTY 
   (
-    [Dim Location].[Country].[Country].Members *
-    [Dim Location].[Location Name].[Location Name].Members *
-    [Dim Total Damage].[Total Houses Damaged].[Total Houses Damaged].Members
+    [Dim Detail Damage].[Houses Damaged].[Houses Damaged].Members *
+    [Dim Detail Damage].[Houses Damaged Description].[Houses Damaged Description].Members
   ) ON ROWS
 FROM [SSIS Tsunami]
 
 
 
 
--- 6. Query Countries where has averegare Earthquake Magnitude, Vol occur 
---over the years of tsunamis
+-- 6. Query for the total number of tsunamis by time of day with descriptions
 
 SELECT 
   {
@@ -87,10 +86,9 @@ SELECT
   } ON COLUMNS,
   NON EMPTY 
   (
-    [Dim Location].[Country].[Country].Members * 
-    [Dim Date].[Year].[Year].Members * 
-    [Dim Description].[Earthquake Magnitude].[Earthquake Magnitude].Members *
-    [Dim Description].[Vol].[Vol].Members
+    [Dim Time].[Hr].[Hr].Members *
+    [Dim Description].[Tsunami Event Validity].[Tsunami Event Validity].Members *
+    [Dim Description].[Tsunami Cause Code].[Tsunami Cause Code].Members
   ) ON ROWS
 FROM [SSIS Tsunami]
 
