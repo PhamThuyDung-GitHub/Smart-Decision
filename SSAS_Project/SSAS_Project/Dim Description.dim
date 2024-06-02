@@ -1,0 +1,205 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="6da1d810-761f-406d-a1b3-624934becff7" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Description</ID>
+  <Name>Dim Description</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="98ba2dde-d9d1-4318-8d77-076792d10d42">
+    <DataSourceViewID>SSIS Tsunami</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="3e965a80-73c0-45a2-837d-7d3ac94225dd">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="6714aa6b-7a8b-4df1-aa91-d4d6a684101e">
+      <ID>ID Description</ID>
+      <Name>ID Description</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e7cc173f-a91a-43a4-a572-e2f3ffccd453">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ee15bb64-817d-4166-b0e7-55f886659785">
+            <TableID>dbo_DimDescription</TableID>
+            <ColumnID>ID_x0020_Description</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="68fc3b53-bcab-4ca4-94f4-7e9e5d15e4a5">
+          <AttributeID>Tsunami Event Validity</AttributeID>
+          <Name>Tsunami Event Validity</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="209caead-c0b8-459f-9ab8-4379da61fd00">
+          <AttributeID>Tsunami Cause Code</AttributeID>
+          <Name>Tsunami Cause Code</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="38beefd0-8eb9-46db-8cf6-c04236720e12">
+          <AttributeID>Earthquake Magnitude</AttributeID>
+          <Name>Earthquake Magnitude</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="daba91dd-0073-4fcc-8ebb-567655cbc541">
+          <AttributeID>Vol</AttributeID>
+          <Name>Vol</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="373ebd13-389e-44cd-87e7-8d338dc38041">
+          <AttributeID>More Info</AttributeID>
+          <Name>More Info</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="70a0c46c-b9d7-4e75-a232-ea5394ad78f8">
+          <AttributeID>Deposits</AttributeID>
+          <Name>Deposits</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="f97b9124-ec2a-48e6-aeaa-56dead3af503">
+      <ID>Tsunami Event Validity</ID>
+      <Name>Tsunami Event Validity</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="91f08627-651c-4302-89a6-c0433a91d40b">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="abe356bb-c4dd-4db2-984a-caf0ad18191e">
+            <TableID>dbo_DimDescription</TableID>
+            <ColumnID>Tsunami_x0020_Event_x0020_Validity</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="4b741a15-feca-4678-a334-e7a4bdcc02ff">
+      <ID>Tsunami Cause Code</ID>
+      <Name>Tsunami Cause Code</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="73f1e946-1dcb-42f2-aadc-f38a92f84e33">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="dd3e8d0f-b9c1-4de9-8549-ab655d49478b">
+            <TableID>dbo_DimDescription</TableID>
+            <ColumnID>Tsunami_x0020_Cause_x0020_Code</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="aca8d18f-2613-4718-b64c-fbb308df7944">
+      <ID>Earthquake Magnitude</ID>
+      <Name>Earthquake Magnitude</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a4878439-bbd7-449c-885e-8566a14dc22c">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="24cb5b4f-2c1d-485f-8f9b-875f525287e6">
+            <TableID>dbo_DimDescription</TableID>
+            <ColumnID>Earthquake_x0020_Magnitude</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="45ff1c9d-635e-4988-a595-83d6aa2fd8b9">
+      <ID>Vol</ID>
+      <Name>Vol</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f8f99ff9-78cf-4d55-8c2a-5b1856bd7893">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2ac43c9c-536c-4dc7-9d33-798b4c007b9c">
+            <TableID>dbo_DimDescription</TableID>
+            <ColumnID>Vol</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="f30ba7ed-895c-4cf8-a1c1-7233592e784d">
+      <ID>More Info</ID>
+      <Name>More Info</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="47089d82-9ffa-4c6c-b0fc-c55b0572800f">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3d3eb395-1e49-41f5-b6dd-6b1083e3a60b">
+            <TableID>dbo_DimDescription</TableID>
+            <ColumnID>More_x0020_Info</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="24c54f82-60a4-4d1b-a657-fb679b796c21">
+      <ID>Deposits</ID>
+      <Name>Deposits</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3c50fdd7-962d-4c8e-aa5f-4a78e2435294">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="18d32f5e-8155-40d3-8589-db584f7dd008">
+            <TableID>dbo_DimDescription</TableID>
+            <ColumnID>Deposits</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

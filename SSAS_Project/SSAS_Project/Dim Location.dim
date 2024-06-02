@@ -1,0 +1,268 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="2fe85f0a-cf29-4189-9e03-8fe351c6b432" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Location</ID>
+  <Name>Dim Location</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="361815fa-223b-4f15-8fd0-b2d6dc6b6a21">
+    <DataSourceViewID>SSIS Tsunami</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="71a20afd-fa75-4f71-a3c0-b915d1838450">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="4f0d3ded-27e7-40aa-9eaf-3edc9663bfdc">
+      <ID>ID Location</ID>
+      <Name>ID Location</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d33e8150-2231-452c-9d28-2bae21fffbf6">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="500651f2-0e49-406e-a13c-571456c1c0b7">
+            <TableID>dbo_DimLocation</TableID>
+            <ColumnID>ID_x0020_Location</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="c92e7cb5-0654-4673-b9e2-4e7b82e971c1">
+          <AttributeID>Country</AttributeID>
+          <Name>Country</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="fffc534b-8f08-4166-8de8-878f73fdbf6a">
+          <AttributeID>Location Name</AttributeID>
+          <Name>Location Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="09cbc823-e49c-4180-84b6-5104d4cda927">
+          <AttributeID>Latitude</AttributeID>
+          <Name>Latitude</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4e26af11-9078-4532-a7e1-66ce744b0781">
+          <AttributeID>Longitude</AttributeID>
+          <Name>Longitude</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="0086e6bf-049f-4e80-b319-30ac1cde77e7">
+          <AttributeID>Maximum Water Height m</AttributeID>
+          <Name>Maximum Water Height m</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="fba86050-a906-4489-8f65-f3c8a8cd45a8">
+          <AttributeID>Number Of Runups</AttributeID>
+          <Name>Number Of Runups</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="466296f9-fb63-4e5f-b4f6-49f76731c4f3">
+          <AttributeID>Tsunami Magnitude  Abe</AttributeID>
+          <Name>Tsunami Magnitude  Abe</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="3049867a-28e1-4694-b6ab-63c0769f3ba7">
+          <AttributeID>Tsunami Magnitude  Iida</AttributeID>
+          <Name>Tsunami Magnitude  Iida</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="260eb185-fb80-4670-8243-accd1b1c0d03">
+          <AttributeID>Tsunami Intensity</AttributeID>
+          <Name>Tsunami Intensity</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="0bddf2f5-3c51-4772-82e1-58328ba9d537">
+      <ID>Country</ID>
+      <Name>Country</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1616bd8d-d6fc-456f-b651-050b81631d11">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="76476ab9-1b4f-433f-ae03-33f3d96e0c6d">
+            <TableID>dbo_DimLocation</TableID>
+            <ColumnID>Country</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a24064f8-aa13-4041-9ef5-5e1e4e4544bd">
+      <ID>Location Name</ID>
+      <Name>Location Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c6f4c043-ff20-4e87-a2d4-271f19151e6f">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="67a1c129-2919-435a-b8e3-83fa05abe833">
+            <TableID>dbo_DimLocation</TableID>
+            <ColumnID>Location_x0020_Name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="85ee791b-4ba9-4492-a6ef-6e77e11274b8">
+      <ID>Latitude</ID>
+      <Name>Latitude</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a9aa8412-806c-4476-a238-a2dc84ff6ad1">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="15b407d8-c514-4396-a649-d8436903c6f3">
+            <TableID>dbo_DimLocation</TableID>
+            <ColumnID>Latitude</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="765f5aa1-2f8b-4918-87d0-4aaed8d0c6a3">
+      <ID>Longitude</ID>
+      <Name>Longitude</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="be6d984a-573f-41ed-a7f9-64567af8bfb0">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f93b3af9-9e69-4371-b8e0-f82642cc1ec4">
+            <TableID>dbo_DimLocation</TableID>
+            <ColumnID>Longitude</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="2f30d9d1-719f-4794-b899-62541939861a">
+      <ID>Maximum Water Height m</ID>
+      <Name>Maximum Water Height m</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="85d7adb8-accc-4175-82c2-a4540e940cef">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b1eb4062-f0c9-48b9-869c-8aa06d61cae9">
+            <TableID>dbo_DimLocation</TableID>
+            <ColumnID>Maximum_x0020_Water_x0020_Height_x0020__x0028_m_x0029_</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="78799f53-0917-4a74-828f-f54d27226d14">
+      <ID>Number Of Runups</ID>
+      <Name>Number Of Runups</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="fa0c1dea-f1c9-4d79-b327-70677638d27c">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0c36f2fb-f706-4dd5-a125-ebfdb2506e00">
+            <TableID>dbo_DimLocation</TableID>
+            <ColumnID>Number_x0020_of_x0020_Runups</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ce53469f-fa6b-45ac-90cc-990516156997">
+      <ID>Tsunami Magnitude  Abe</ID>
+      <Name>Tsunami Magnitude  Abe</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="14577a4e-d111-4b8f-8fce-d2c61b076809">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="372cf5f3-2ad8-473e-b3ce-64694f8888a7">
+            <TableID>dbo_DimLocation</TableID>
+            <ColumnID>Tsunami_x0020_Magnitude_x0020__x0028_Abe_x0029_</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="1bb56fdd-c87b-467a-b7d4-e399ab84ac1f">
+      <ID>Tsunami Magnitude  Iida</ID>
+      <Name>Tsunami Magnitude  Iida</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ce471a9d-d928-422e-9042-633f27b80914">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ea802d8e-027a-495d-8ad4-67506c8a1058">
+            <TableID>dbo_DimLocation</TableID>
+            <ColumnID>Tsunami_x0020_Magnitude_x0020__x0028_Iida_x0029_</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="7d7c7d11-c334-4cc7-9f1f-bdff8ad135de">
+      <ID>Tsunami Intensity</ID>
+      <Name>Tsunami Intensity</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="95a3db54-1c82-4d8e-bf66-0d72aab679b5">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3f3e96bd-b5cc-4772-98ee-66678a720d92">
+            <TableID>dbo_DimLocation</TableID>
+            <ColumnID>Tsunami_x0020_Intensity</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

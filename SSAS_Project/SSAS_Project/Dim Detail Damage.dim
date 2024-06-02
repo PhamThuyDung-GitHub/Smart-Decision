@@ -1,0 +1,357 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="9c864461-0be0-4e1b-89bb-ac74a883e5ec" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Detail Damage</ID>
+  <Name>Dim Detail Damage</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="17" scrolltop="-5981" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="86" x="5733" y="14587" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900180380100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimDetailDamage" left="20" top="266" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="5080" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000d813000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimDetailDamage" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>17</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-5981</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>266</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>86</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="094d8224-fb12-407d-84aa-1bb5c16c2d36">
+    <DataSourceViewID>SSIS Tsunami</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="2800e911-00e3-4ce2-a161-fa6c68c161ad">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="03bf1075-4a16-49a4-8a1a-89b22e1135b0">
+      <ID>ID Detail Damage</ID>
+      <Name>ID Detail Damage</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="33f5655d-fe18-4216-9b37-796313881c59">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d8eeebd4-42df-409e-b0a9-a4c074874ea7">
+            <TableID>dbo_DimDetailDamage</TableID>
+            <ColumnID>ID_x0020_Detail_x0020_Damage</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="23522644-1303-4efc-a7aa-3d83be8490cd">
+          <AttributeID>Deaths</AttributeID>
+          <Name>Deaths</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="2033954a-78b6-4e27-8c1a-d45909bbb5e3">
+          <AttributeID>Death Description</AttributeID>
+          <Name>Death Description</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="cb14c952-e92f-435e-8056-98baccbe0106">
+          <AttributeID>Missing</AttributeID>
+          <Name>Missing</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="1fa43b47-d468-4112-9525-edd8a12edd0f">
+          <AttributeID>Missing Description</AttributeID>
+          <Name>Missing Description</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d1c59ad6-d04a-42e2-972a-945b0b063083">
+          <AttributeID>Injuries</AttributeID>
+          <Name>Injuries</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="85d27cfd-4dd0-4234-b1ee-0f7965245612">
+          <AttributeID>Injuries Description</AttributeID>
+          <Name>Injuries Description</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="deb3ba9c-8e77-4d8b-83bf-41ea8cfc3376">
+          <AttributeID>Damage  Mil</AttributeID>
+          <Name>Damage  Mil</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="b2f3d7e0-99c8-4b5d-80d1-19c93d4a128b">
+          <AttributeID>Damage Description</AttributeID>
+          <Name>Damage Description</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="5b9fe5af-086f-45be-a8c3-985f8977240d">
+          <AttributeID>Houses Destroyed</AttributeID>
+          <Name>Houses Destroyed</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f953f9e1-880d-45f9-b33d-94ca0adb3ea2">
+          <AttributeID>Houses Destroyed Description</AttributeID>
+          <Name>Houses Destroyed Description</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c2d06659-039a-4c80-a343-db774fdcb8c2">
+          <AttributeID>Houses Damaged</AttributeID>
+          <Name>Houses Damaged</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="51604203-5d95-4a96-bcb2-171d40e6d2a0">
+          <AttributeID>Houses Damaged Description</AttributeID>
+          <Name>Houses Damaged Description</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="4b37903b-b8f6-4816-a060-7debac070fc0">
+      <ID>Deaths</ID>
+      <Name>Deaths</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5727bcf4-15b7-4eff-900d-0a3e25dbf26a">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ee9a6f18-e8ae-41f2-9fbb-54b1fff1f561">
+            <TableID>dbo_DimDetailDamage</TableID>
+            <ColumnID>Deaths</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="10376816-453c-42df-b31a-c1983face675">
+      <ID>Death Description</ID>
+      <Name>Death Description</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="74379a12-e58c-468e-98d7-0feedefac6ab">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a3510c8b-8b29-44cb-8906-0436c441e66c">
+            <TableID>dbo_DimDetailDamage</TableID>
+            <ColumnID>Death_x0020_Description</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="187245f4-4753-432a-af88-17ee4d24a703">
+      <ID>Missing</ID>
+      <Name>Missing</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f022577a-f438-43d5-a094-cb196be2ea45">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b1b78cb3-a2b6-4dc5-93e5-90a74174bc4d">
+            <TableID>dbo_DimDetailDamage</TableID>
+            <ColumnID>Missing</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ebae9794-f3b1-4a3b-9457-d555010e53e8">
+      <ID>Missing Description</ID>
+      <Name>Missing Description</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e7b26db9-877e-4eb4-a13e-a80f48626e2d">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2fc428d2-1e17-4179-8d83-20062c0e281c">
+            <TableID>dbo_DimDetailDamage</TableID>
+            <ColumnID>Missing_x0020_Description</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="56720027-2cb0-490d-bae6-aafd9bd32681">
+      <ID>Injuries</ID>
+      <Name>Injuries</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d55de4ec-2a5d-402b-9db0-098cdbc6ed04">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f963a0d8-fec2-4f41-b38a-5097319002cf">
+            <TableID>dbo_DimDetailDamage</TableID>
+            <ColumnID>Injuries</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="fc3fa896-9c26-4a00-b531-99605dfc6083">
+      <ID>Injuries Description</ID>
+      <Name>Injuries Description</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e26d92d3-fc1e-4232-9bf8-aa9f94781182">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ec12e0fc-7750-4455-a467-649f9f6b06a1">
+            <TableID>dbo_DimDetailDamage</TableID>
+            <ColumnID>Injuries_x0020_Description</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d5c96458-a1f5-4bdf-bed0-997efe69c029">
+      <ID>Damage  Mil</ID>
+      <Name>Damage  Mil</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7e6cdd25-bfa6-4a61-945b-0673f57a398b">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ba0a796c-1930-4d68-bb04-d0b1332bd4a5">
+            <TableID>dbo_DimDetailDamage</TableID>
+            <ColumnID>Damage_x0020__x0028__x0024_Mil_x0029_</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="9a45152a-b0e2-4933-a75e-b1163f70ab9d">
+      <ID>Damage Description</ID>
+      <Name>Damage Description</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6b82878a-3fbf-482e-85d9-efa2f34f1e50">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="00ca5352-63d3-4e92-b1c4-a20a0a70226b">
+            <TableID>dbo_DimDetailDamage</TableID>
+            <ColumnID>Damage_x0020_Description</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="01b8328c-c736-4738-98e4-e47ccd71e624">
+      <ID>Houses Destroyed</ID>
+      <Name>Houses Destroyed</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8b688935-221c-4842-9eb6-7a183ce658f3">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3dbdbadd-9dcf-406c-8083-18cf07209027">
+            <TableID>dbo_DimDetailDamage</TableID>
+            <ColumnID>Houses_x0020_Destroyed</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="33611a01-575c-4460-9747-425b24508b66">
+      <ID>Houses Destroyed Description</ID>
+      <Name>Houses Destroyed Description</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1cca5040-5ca3-4dcb-bfd2-771ce8bbafcc">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b3fa50af-f7fa-4747-8d6b-ede4c946ad65">
+            <TableID>dbo_DimDetailDamage</TableID>
+            <ColumnID>Houses_x0020_Destroyed_x0020_Description</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a7b332a0-1e56-4130-88d4-42264e9e6bb2">
+      <ID>Houses Damaged</ID>
+      <Name>Houses Damaged</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="72831069-e353-4934-8063-9b7d1486202b">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="05dbd52b-5ea7-419c-a6b0-1577133733b7">
+            <TableID>dbo_DimDetailDamage</TableID>
+            <ColumnID>Houses_x0020_Damaged</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="2ab926c0-ce04-4367-9c32-d06cda2ce8af">
+      <ID>Houses Damaged Description</ID>
+      <Name>Houses Damaged Description</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d5ffddd7-7ca4-444d-8152-3136f21d51cd">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="bfc056a4-3502-4316-8ef3-e3dbe2252457">
+            <TableID>dbo_DimDetailDamage</TableID>
+            <ColumnID>Houses_x0020_Damaged_x0020_Description</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

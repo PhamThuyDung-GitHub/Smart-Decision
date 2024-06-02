@@ -1,0 +1,331 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="21901c04-2a98-4379-ac06-ab6e1fe34bb7" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Total Damage</ID>
+  <Name>Dim Total Damage</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="31a069d4-e54b-45e2-8a94-dec68e07f39d">
+    <DataSourceViewID>SSIS Tsunami</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="71f0a976-4201-44cc-83cf-f85a44bc593e">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="dccf1855-dbbd-4c15-8f81-d5a2b8ce632b">
+      <ID>ID Total Damage</ID>
+      <Name>ID Total Damage</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="67ad7bac-fe45-449d-aad7-cc3f471e1dc3">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f813f49c-e3b2-4365-9c78-87d36cfdf663">
+            <TableID>dbo_DimTotalDamage</TableID>
+            <ColumnID>ID_x0020_Total_x0020_Damage</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="efc72bf3-08b0-4ce9-b051-4f8191315cef">
+          <AttributeID>Total Deaths</AttributeID>
+          <Name>Total Deaths</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="16398864-5da0-4faf-bd62-2b253bc6b11d">
+          <AttributeID>Total Death Description</AttributeID>
+          <Name>Total Death Description</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="127c3ea5-9e58-4d63-ac2f-ef9edcd5325f">
+          <AttributeID>Total Missing</AttributeID>
+          <Name>Total Missing</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="8a6d7671-0a52-48ca-ab39-03425b03aa2a">
+          <AttributeID>Total Missing Description</AttributeID>
+          <Name>Total Missing Description</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="0d505219-c939-41de-8bba-0d668d2c8bad">
+          <AttributeID>Total Injuries</AttributeID>
+          <Name>Total Injuries</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="215ed1bf-e5e8-466b-883c-c2c188537e44">
+          <AttributeID>Total Injuries Description</AttributeID>
+          <Name>Total Injuries Description</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="a3901fb4-6cba-4314-8ede-b5052eaad713">
+          <AttributeID>Total Damage  Mil</AttributeID>
+          <Name>Total Damage  Mil</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="8d682b5d-2dbd-4a1d-a720-5c106fd1ecea">
+          <AttributeID>Total Damage Description</AttributeID>
+          <Name>Total Damage Description</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="67db0d06-aff3-4e98-811f-0f547205686f">
+          <AttributeID>Total Houses Destroyed</AttributeID>
+          <Name>Total Houses Destroyed</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="0b4cab19-9083-44de-b6aa-9187774ebc5d">
+          <AttributeID>Total Houses Destroyed Description</AttributeID>
+          <Name>Total Houses Destroyed Description</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4da973d7-3655-4a6b-a5b3-51fe5c3c69c4">
+          <AttributeID>Total Houses Damaged</AttributeID>
+          <Name>Total Houses Damaged</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="bdac1005-6a41-43cb-98a3-a355b3d907d4">
+          <AttributeID>Total Houses Damaged Description</AttributeID>
+          <Name>Total Houses Damaged Description</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e020fb43-f322-488c-9d0f-3e2104d4edad">
+      <ID>Total Deaths</ID>
+      <Name>Total Deaths</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f24be5f3-2d8f-413d-8e4c-1a06859d690d">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="60b12e71-d86d-4f32-8fbc-69b6693c387c">
+            <TableID>dbo_DimTotalDamage</TableID>
+            <ColumnID>Total_x0020_Deaths</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e40cd5b4-94bb-4208-a2fc-e143c4ca7a65">
+      <ID>Total Death Description</ID>
+      <Name>Total Death Description</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2ef2ce91-2388-4ed4-976e-5e757bb791e9">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9a127d14-4772-4984-adb3-ec867649d2b5">
+            <TableID>dbo_DimTotalDamage</TableID>
+            <ColumnID>Total_x0020_Death_x0020_Description</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e88a2ad2-d4da-44df-96f6-13b01258990d">
+      <ID>Total Missing</ID>
+      <Name>Total Missing</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c3716d6d-88cb-48dd-b45d-adc38025545a">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="652fca5e-cd3d-4222-94f9-ff3cf133f033">
+            <TableID>dbo_DimTotalDamage</TableID>
+            <ColumnID>Total_x0020_Missing</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="aa30ebe0-78fd-4a3a-98ea-8363e1d5acc8">
+      <ID>Total Missing Description</ID>
+      <Name>Total Missing Description</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7e952eaf-9fef-4859-90bf-ae9adfcecbf1">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0f13a0f3-500a-475e-8836-c0134e63d6c4">
+            <TableID>dbo_DimTotalDamage</TableID>
+            <ColumnID>Total_x0020_Missing_x0020_Description</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e3b11c9b-e81b-431e-b50f-eb44206df639">
+      <ID>Total Injuries</ID>
+      <Name>Total Injuries</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5241b0be-ed43-483b-8eea-59ab2159095c">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ac5f73f7-770f-4698-beeb-1f0b4ddadc13">
+            <TableID>dbo_DimTotalDamage</TableID>
+            <ColumnID>Total_x0020_Injuries</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="7af7e5a5-ccf1-4c6e-b424-ea09a395854e">
+      <ID>Total Injuries Description</ID>
+      <Name>Total Injuries Description</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="47bbf7c1-4cab-4586-bc74-d1f892082971">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6d0216d0-e579-4995-874a-eaf2d696dea1">
+            <TableID>dbo_DimTotalDamage</TableID>
+            <ColumnID>Total_x0020_Injuries_x0020_Description</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5fa2fa51-1e14-4f80-ac19-821b5e3f2a90">
+      <ID>Total Damage  Mil</ID>
+      <Name>Total Damage  Mil</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b621fa7c-ae16-43ce-8312-248d2c6dcb84">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="138f0d41-334b-4161-addc-b24a8478e372">
+            <TableID>dbo_DimTotalDamage</TableID>
+            <ColumnID>Total_x0020_Damage_x0020__x0028__x0024_Mil_x0029_</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="55b8e707-8657-4c27-a397-dcbf74d7ee29">
+      <ID>Total Damage Description</ID>
+      <Name>Total Damage Description</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a6ab4a47-10ae-43f6-8e0f-c70135a55a20">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c30653cc-565a-40fc-992c-c445d1bfb6ad">
+            <TableID>dbo_DimTotalDamage</TableID>
+            <ColumnID>Total_x0020_Damage_x0020_Description</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="4d7296a0-46e7-4f7e-8803-dbac59e98b28">
+      <ID>Total Houses Destroyed</ID>
+      <Name>Total Houses Destroyed</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f3939edf-338d-4a2d-ba5b-6690d9ccce28">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1a136fde-d89c-4341-9005-24b04be6d5af">
+            <TableID>dbo_DimTotalDamage</TableID>
+            <ColumnID>Total_x0020_Houses_x0020_Destroyed</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="270e026f-12a8-4b04-99c9-576836d7f130">
+      <ID>Total Houses Destroyed Description</ID>
+      <Name>Total Houses Destroyed Description</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="06943716-2323-48e5-b6d0-f6e75880eb91">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3ecbcb82-6390-4e95-bc28-02823ea55ca1">
+            <TableID>dbo_DimTotalDamage</TableID>
+            <ColumnID>Total_x0020_Houses_x0020_Destroyed_x0020_Description</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="7e3f0bd6-92eb-4dc1-a5da-df6d1f2d1350">
+      <ID>Total Houses Damaged</ID>
+      <Name>Total Houses Damaged</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="46f88d3e-9d85-406a-87bc-5366164768ef">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b55c7c22-ac8f-418e-be7f-f7ac7ca9707a">
+            <TableID>dbo_DimTotalDamage</TableID>
+            <ColumnID>Total_x0020_Houses_x0020_Damaged</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="0b1668d4-a81e-43a8-af7f-3e8843b52a24">
+      <ID>Total Houses Damaged Description</ID>
+      <Name>Total Houses Damaged Description</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="54ac4054-cdec-406e-a7e8-41345d617e1a">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8fc211df-43a1-4923-b821-90973e6f7fdd">
+            <TableID>dbo_DimTotalDamage</TableID>
+            <ColumnID>Total_x0020_Houses_x0020_Damaged_x0020_Description</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>
