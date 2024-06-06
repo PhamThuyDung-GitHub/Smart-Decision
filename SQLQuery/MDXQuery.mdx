@@ -157,4 +157,101 @@ SELECT
   ) ON ROWS
 FROM [SSIS Tsunami]
 
+-----------------
+-- query where the location name has tsunami in 2021
+
+SELECT 
+  NON EMPTY {
+    [Measures].[Fact Count]
+  } ON COLUMNS,
+  NON EMPTY {
+    [Dim Location].[Location Name].[Location Name].Members
+  } ON ROWS
+FROM [SSIS Tsunami]
+WHERE ([Dim Date].[Year].&[2021])
+
+-------------
+--query the total deaths in 2020
+
+SELECT 
+  NON EMPTY {
+    [Measures].[Fact Count]
+  } ON COLUMNS,
+  NON EMPTY {
+    [Dim Total Damage].[Total Deaths].[Total Deaths].Members
+  } ON ROWS
+FROM [SSIS Tsunami]
+WHERE ([Dim Date].[Year].&[2020])
+
+--------------
+
+
+SELECT 
+  NON EMPTY {
+    [Measures].[Fact Count]  
+  } ON COLUMNS,
+  NON EMPTY {
+    FILTER(
+      [Dim Location].[Country].[Country].Members *
+      [Dim Date].[Year].[Year].Members,
+      [Measures].[Fact Count] > 10
+    )
+  } ON ROWS
+FROM [SSIS Tsunami]
+
+
+------------------
+
+SELECT 
+  NON EMPTY {
+    [Measures].[Fact Count] 
+  } ON COLUMNS,
+  NON EMPTY {
+    TOPCOUNT(
+      [Dim Location].[Country].[Country].Members,
+      10,
+      [Measures].[Fact Count]  
+    )
+  } ON ROWS
+FROM [SSIS Tsunami]
+WHERE ([Dim Date].[Year].&[2020])
+
+-------
+
+SELECT 
+  NON EMPTY {
+    [Measures].[Fact Count]  
+  } ON COLUMNS,
+  NON EMPTY {
+    TOPCOUNT(
+      [Dim Date].[Year].[Year].Members,
+      3,
+      [Measures].[Fact Count]  
+    )
+  } ON ROWS
+FROM [SSIS Tsunami]
+
+---
+
+SELECT 
+  NON EMPTY {
+    [Measures].[Fact Count]  -- Replace with the correct measure name for deaths
+  } ON COLUMNS,
+  NON EMPTY {
+    GENERATE(
+      [Dim Date].[Year].[Year].Members,
+      TOPCOUNT(
+        [Dim Location].[Country].[Country].Members,
+        3,
+        [Measures].[Fact Count]  -- Replace with the correct measure name for deaths
+      )
+    )
+  } ON ROWS
+FROM [SSIS Tsunami]
+
+
+
+
+
+
   
