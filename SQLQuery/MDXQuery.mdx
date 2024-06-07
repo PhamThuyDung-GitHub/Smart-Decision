@@ -109,99 +109,8 @@ FROM [SSIS Tsunami]
 
 
 
-
--- 8. Query for the maximum water height by country and year
-
-SELECT 
-  {
-    [Measures].[Fact Count]
-  } ON COLUMNS,
-  NON EMPTY 
-  (
-    [Dim Location].[Country].[Country].Members *
-    [Dim Location].[Location Name].[Location Name].Members *
-	[Dim Date].[Year].[Year].Members * 
-	[Dim Date].[Mo].[Mo].Members
-
-  ) ON ROWS
-FROM [SSIS Tsunami]
-
-
--- 9. Query for number of houses destroyed by country and year
-
-SELECT 
-  {
-    [Measures].[Fact Count]
-  } ON COLUMNS,
-  NON EMPTY 
-  (
-    [Dim Location].[Country].[Country].Members *
-    [Dim Date].[Year].[Year].Members *
-    [Dim Total Damage].[Total Houses Destroyed].[Total Houses Destroyed].Members
-  ) ON ROWS
-FROM [SSIS Tsunami]
-
-
-
--- 10. Query for the total damage ($) by country and year
-
-SELECT 
-  {
-    [Measures].[Fact Count]
-  } ON COLUMNS,
-  NON EMPTY 
-  (
-    [Dim Date].[Year].[Year].Members *
-    [Dim Location].[Location Name].[Location Name].Members *
-    [Dim Total Damage].[Total Damage  Mil].[Total Damage  Mil].Members
-  ) ON ROWS
-FROM [SSIS Tsunami]
-
------------------
--- query where the location name has tsunami in 2021
-
-SELECT 
-  NON EMPTY {
-    [Measures].[Fact Count]
-  } ON COLUMNS,
-  NON EMPTY {
-    [Dim Location].[Location Name].[Location Name].Members
-  } ON ROWS
-FROM [SSIS Tsunami]
-WHERE ([Dim Date].[Year].&[2021])
-
--------------
---query the total deaths in 2020
-
-SELECT 
-  NON EMPTY {
-    [Measures].[Fact Count]
-  } ON COLUMNS,
-  NON EMPTY {
-    [Dim Total Damage].[Total Deaths].[Total Deaths].Members
-  } ON ROWS
-FROM [SSIS Tsunami]
-WHERE ([Dim Date].[Year].&[2020])
-
---------------
-
-
-SELECT 
-  NON EMPTY {
-    [Measures].[Fact Count]  
-  } ON COLUMNS,
-  NON EMPTY {
-    FILTER(
-      [Dim Location].[Country].[Country].Members *
-      [Dim Date].[Year].[Year].Members,
-      [Measures].[Fact Count] > 10
-    )
-  } ON ROWS
-FROM [SSIS Tsunami]
-
-
 ------------------
-
+--8. Top 10 Countries by Event Count in 2020
 SELECT 
   NON EMPTY {
     [Measures].[Fact Count] 
@@ -217,7 +126,7 @@ FROM [SSIS Tsunami]
 WHERE ([Dim Date].[Year].&[2020])
 
 -------
-
+--9. Top 3 Years by Event Count
 SELECT 
   NON EMPTY {
     [Measures].[Fact Count]  
@@ -232,6 +141,7 @@ SELECT
 FROM [SSIS Tsunami]
 
 ---
+--10. Top 3 Countries by Event Count for Each Year
 
 SELECT 
   NON EMPTY {
